@@ -43,7 +43,7 @@ do
                 SCAN_MSG=1
         fi
         done
-        if [ $SCAN_MSG -eq 1 ]; then
+        if [ $SCAN_MSG -eq "1" ]; then
                 echo "Some files in imunify scan list are missing, consider running scan again."
         fi
 
