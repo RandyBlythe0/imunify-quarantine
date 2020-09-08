@@ -21,7 +21,7 @@ function quarantine_malwares
 recovery_file=$JAIL_DIR/recovery_$(date +"%Y-%m-%d-%H-%M").sh
 echo "Recovery file: $recovery_file"
 mkdir -p "$JAIL_DIR"
-for file in `imunify360-agent malware malicious list| awk {'if( NR > 1) print $4'}`
+for file in `imunify360-agent malware malicious list --limit 100000| awk {'if( NR > 1) print $4'}`
 do
         #echo $file
         file="$file"
